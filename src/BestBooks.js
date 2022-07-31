@@ -1,6 +1,7 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
 import axios from 'axios';
+import bookImg from './book.jpeg'
 
 let herokuURL = 'https://can-of-books-ajh-hc.herokuapp.com/books';
 
@@ -39,7 +40,7 @@ class BestBooks extends React.Component {
         <Carousel>
           {this.state.books.map(element => 
             <Carousel.Item key={element._id}>
-              <img src="https://place-hold.it/2000x400/White/Black.jpeg" alt={element.title}/>
+              <img src={bookImg} alt={element.title}/>
               <Carousel.Caption style={{margin: "20px"}}><h4>{element.title}</h4></Carousel.Caption>
               <Carousel.Caption>{element.description}</Carousel.Caption>
 
