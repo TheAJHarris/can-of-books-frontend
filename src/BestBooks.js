@@ -39,10 +39,11 @@ class BestBooks extends React.Component {
   }
 
   deleteBooks = (e) => {
-    console.log(e);
-    axios.delete(herokuURL + `/${e.target._id}`).then(() => {
-      this.setState({books: this.state.books.filter(el => el._id !== e.target._id)});
+    console.log(e.target.id);
+    axios.delete(herokuURL + `/${e.target.id}`).then(() => {
+      this.setState({books: this.state.books.filter(el => el._id !== e.target.id)});
       });
+    this.getBooks();
   }
   
 
@@ -73,8 +74,8 @@ class BestBooks extends React.Component {
               <img src={bookImg} alt={element.title}/>
               <Carousel.Caption style={{margin: "20px"}}><h4>{element.title}</h4></Carousel.Caption>
               <Carousel.Caption>{element.description}</Carousel.Caption>
-              <Button id= {element._id} onClick={this.deleteBooks}>Delete Book</Button>
-            
+              <Button id= {element._id} onClick={this.deleteBooks} style={{marginLeft: "200px"}}>Delete Book</Button>
+
             </Carousel.Item>
           )}
         </Carousel>
