@@ -48,6 +48,15 @@ Finish time: 7:00pm
 
 Actual time needed to complete: 1 hr
 
+## Feature 2: Add Books
+
+Estimate of time needed to complete: 2 hr
+
+Start time: 8:00 pm
+
+Finish time: 
+
+Actual time needed to complete: 
 ## Team Agreement
 
 ### Logistics
